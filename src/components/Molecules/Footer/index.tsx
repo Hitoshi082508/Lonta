@@ -1,33 +1,33 @@
 import { styles } from './styles'
 import { MdPeople } from 'react-icons/md'
 import Link from 'next/link'
-import Hamburger from '@/components/Atoms/Hamburger'
-import { isMobile } from 'react-device-detect'
 
 const Footer: React.FC = () => {
   return (
-    <header css={styles.base}>
+    <footer css={styles.base}>
       <div css={styles.container}>
         <div css={styles.logoContainer}>
           <div css={styles.logoTitle}>LOGO</div>
           <div css={styles.logoSubTitle}>サービスキャッチコピー</div>
         </div>
         <ul css={styles.navContainer}>
-          <li>
-            <Link href="" css={styles.nav}>
-              〇〇について
-            </Link>
-          </li>
-          <li>
-            <Link href="" css={styles.nav}>
-              職種から探す
-            </Link>
-          </li>
-          <li>
-            <Link href="" css={styles.nav}>
-              適正診断してみる
-            </Link>
-          </li>
+          <div css={styles.textContainer}>
+            <li>
+              <Link href="" css={styles.nav}>
+                〇〇について
+              </Link>
+            </li>
+            <li>
+              <Link href="" css={styles.nav}>
+                職種から探す
+              </Link>
+            </li>
+            <li>
+              <Link href="" css={styles.nav}>
+                適正診断してみる
+              </Link>
+            </li>
+          </div>
           <li>
             <button>
               <Link href="" css={styles.contact}>
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
       <div css={styles.copyRight}>
         Copyright ©️ 2022 ◯◯ All rights reserved.
       </div>
-    </header>
+    </footer>
   )
 }
 

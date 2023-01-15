@@ -11,16 +11,19 @@ export const styles = makeStyles({
     flex-direction: column;
     width: 100%;
     height: 160px;
-    position: relative;
-    background-color: ${theme.color.deepGray};
+    background-color: ${theme.color.black};
     color: ${theme.color.white};
+    ${sp} {
+      height: 310px;
+    }
   `,
   container: () => css`
     display: flex;
     justify-content: space-around;
-
     width: 1120px;
     ${sp} {
+      width: 100%;
+      flex-direction: column;
       padding: 0 ${spacing * 3}px;
     }
   `,
@@ -35,7 +38,6 @@ export const styles = makeStyles({
   logoSubTitle: (theme) => css`
     font-size: ${theme.typography.text.size.xs};
   `,
-
   navContainer: (theme) => css`
     display: flex;
     flex-direction: row;
@@ -44,9 +46,22 @@ export const styles = makeStyles({
     font-size: ${theme.typography.text.size.m};
     font-weight: ${theme.typography.weight.bold};
     list-style: none;
-    gap: ${spacing * 5}px;
     ${sp} {
-      display: none;
+      flex-direction: column;
+      font-size: ${theme.typography.text.size.s};
+      padding-left: 0;
+    }
+  `,
+  textContainer: () => css`
+    display: flex;
+    gap: ${spacing * 6}px;
+    margin-right: ${spacing * 6}px;
+    ${sp} {
+      width: 345px;
+      justify-content: space-between;
+      margin-right: 0;
+      gap: 0px;
+      margin: ${spacing * 5}px 0;
     }
   `,
   nav: (theme) => css`
@@ -66,6 +81,9 @@ export const styles = makeStyles({
     padding: 0 ${spacing * 3}px;
     :visited {
       color: ${theme.color.white};
+    }
+    ${sp} {
+      margin-bottom: ${spacing * 5}px;
     }
   `,
   copyRight: (theme) => css`
