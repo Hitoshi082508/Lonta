@@ -1,9 +1,15 @@
 import { css } from '@emotion/react'
 import makeStyles from '@/styles/makeStyles'
 import { spacing } from '@/styles/spacing'
+import { sp } from '@/styles/breakpoint'
 
 export const styles = makeStyles({
-  container: (theme) => css``,
+  container: () => css`
+    display: none;
+    ${sp} {
+      display: block;
+    }
+  `,
   icon: () => css``,
   navContainer: (theme) => css`
     min-width: 100%;
