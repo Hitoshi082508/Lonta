@@ -1,5 +1,5 @@
 import Article from '@/components/Templates/Article'
-import Sidebar from '@/components/Templates/Sidebar'
+import TableOfContents from '@/components/Molecules/TableOfContents'
 import { Contents } from '@/types/contents'
 import { styles } from './styles'
 
@@ -12,7 +12,7 @@ const DetailPage: React.FC<DetailProps> = ({ data }) => {
     <div css={styles.base}>
       <div css={styles.container}>
         <Article data={data} />
-        <Sidebar />
+        <TableOfContents />
       </div>
     </div>
   )

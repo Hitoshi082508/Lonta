@@ -13,7 +13,7 @@ const Article: React.FC<ArticleProps> = ({ data }) => {
     return { __html: data.content }
   }
   return (
-    <article css={styles.container}>
+    <article css={styles.container} className="body">
       <h1 css={styles.title}>{data.title}</h1>
       <div css={styles.categoryContainer}>
         {data.category.map((item) => {
