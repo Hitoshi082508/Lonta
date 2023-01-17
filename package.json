@@ -25,7 +25,8 @@
     "react-device-detect": "^2.2.2",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
-    "react-swipeable": "^7.0.0"
+    "react-swipeable": "^7.0.0",
+    "tocbot": "^4.20.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
