@@ -19,7 +19,7 @@ export const styles = makeStyles({
   `,
   container: () => css`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 1120px;
     ${sp} {
       width: 100%;
@@ -65,6 +65,7 @@ export const styles = makeStyles({
     }
   `,
   nav: (theme) => css`
+    color: ${theme.color.white};
     border-bottom: 1px solid ${theme.color.white};
     :visited {
       color: ${theme.color.white};

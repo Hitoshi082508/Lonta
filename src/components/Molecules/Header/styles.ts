@@ -41,6 +41,7 @@ export const styles = makeStyles({
     }
   `,
   nav: (theme) => css`
+    color: ${theme.color.black};
     :visited {
       color: ${theme.color.black};
     }
