@@ -8,6 +8,7 @@ const Header: React.FC = () => {
     <header css={styles.base}>
       <div css={styles.container}>
         <div css={styles.logo}>LOGO</div>
+        <Hamburger />
         <ul css={styles.navContainer}>
           <li>
             <Link href="" css={styles.nav}>
@@ -34,7 +35,6 @@ const Header: React.FC = () => {
           </li>
         </ul>
       </div>
-      <Hamburger />
     </header>
   )
 }
