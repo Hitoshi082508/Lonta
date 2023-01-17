@@ -1,6 +1,7 @@
 import { css } from '@emotion/react'
 import makeStyles from '@/styles/makeStyles'
 import { spacing } from '@/styles/spacing'
+import { sp } from '@/styles/breakpoint'
 
 export const styles = makeStyles({
   container: (theme) => css`
@@ -12,6 +13,9 @@ export const styles = makeStyles({
     background-color: ${theme.color.white};
     box-shadow: ${theme.shadow.main};
     padding: ${spacing * 4}px;
+    ${sp} {
+      display: none;
+    }
   `,
   tableOfContentsTitle: (theme) => css`
     font-size: ${theme.typography.text.size.l};
