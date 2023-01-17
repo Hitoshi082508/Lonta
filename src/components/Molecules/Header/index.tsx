@@ -2,12 +2,21 @@ import { styles } from './styles'
 import { MdPeople } from 'react-icons/md'
 import Link from 'next/link'
 import Hamburger from '@/components/Atoms/Hamburger'
+import NextImage from '@/components/Atoms/NextImage'
+import LontaLogo from '../../../../assets/images/logo.jpg'
 
 const Header: React.FC = () => {
   return (
     <header css={styles.base}>
       <div css={styles.container}>
-        <div css={styles.logo}>LOGO</div>
+        <NextImage
+          src={LontaLogo}
+          width={180}
+          height={50}
+          spWidth={140}
+          spHeight={40}
+          alt="Lontaのロゴ"
+        />
         <Hamburger />
         <ul css={styles.navContainer}>
           <li>
