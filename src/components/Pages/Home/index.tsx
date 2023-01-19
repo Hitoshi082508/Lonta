@@ -1,4 +1,4 @@
-import Breadcrumb from '@/components/Atoms/Breadcrumb'
+import BreadcrumbList from '@/components/Molecules/BreadcrumbList'
 import About from '@/components/Templates/About'
 import Contact from '@/components/Templates/Contact'
 import JobList from '@/components/Templates/JobList'
@@ -12,11 +12,15 @@ type HomePageProps = {
   data: Contents[]
 }
 
+const dummyBreadcrums = [
+  { title: 'トップ', link: '/' },
+  { title: 'Webデザイナーになりたい', link: '/designer' },
+]
+
 const HomePage: React.FC<HomePageProps> = ({ data }) => {
   return (
     <>
-      <Breadcrumb title="トップ" link="/"></Breadcrumb>
-      <Breadcrumb title="Webデザイナーになりたい" link="/"></Breadcrumb>
+      <BreadcrumbList breadcrumbs={dummyBreadcrums} />
       <Top data={data} />
       <About />
       <JobList
