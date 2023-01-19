@@ -1,5 +1,6 @@
+import { theme } from '@/styles/theme'
 import Link from 'next/link'
-import { styles } from './styles'
+import { changeColor, styles } from './styles'
 
 type BreadcrumbProps = {
   title: string
@@ -9,7 +10,7 @@ type BreadcrumbProps = {
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ title, link, isLast }) => {
   return (
-    <div css={styles.container}>
+    <div css={[styles.container, changeColor(isLast, theme)]}>
       <Link href={link} css={styles.link}>
         {title}
       </Link>
