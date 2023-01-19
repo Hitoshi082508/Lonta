@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { styles } from './styles'
 
 type BreadcrumbProps = {
   title: string
@@ -6,7 +7,13 @@ type BreadcrumbProps = {
 }
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ title, link }) => {
-  return <Link href={link}>{title}</Link>
+  return (
+    <div css={styles.container}>
+      <Link href={link} css={styles.link}>
+        {title}
+      </Link>
+    </div>
+  )
 }
 
 export default Breadcrumb
