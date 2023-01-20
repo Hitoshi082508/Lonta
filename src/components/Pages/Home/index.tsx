@@ -15,11 +15,14 @@ type HomePageProps = {
 const dummyBreadcrums = [
   { title: 'トップ', link: '/' },
   { title: 'Webデザイナーになりたい', link: '/designer' },
+  { title: 'UI/UXデザイナー', link: '/designer' },
 ]
 
 const HomePage: React.FC<HomePageProps> = ({ data }) => {
   return (
     <>
+      <BreadcrumbList breadcrumbs={dummyBreadcrums.slice(0, 1)} />
+      <BreadcrumbList breadcrumbs={dummyBreadcrums.slice(0, 2)} />
       <BreadcrumbList breadcrumbs={dummyBreadcrums} />
       <Top data={data} />
       <About />
