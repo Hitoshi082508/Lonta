@@ -3,7 +3,7 @@ import { MdPeople } from 'react-icons/md'
 import Link from 'next/link'
 import Hamburger from '@/components/Atoms/Hamburger'
 import NextImage from '@/components/Atoms/NextImage'
-import LontaLogo from '../../../../assets/images/logo.jpg'
+import LontaLogo from '../../../../assets/images/header-logo.jpg'
 
 const Header: React.FC = () => {
   return (

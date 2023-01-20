@@ -1,15 +1,21 @@
 import { styles } from './styles'
 import { MdPeople } from 'react-icons/md'
 import Link from 'next/link'
+import NextImage from '@/components/Atoms/NextImage'
+import LontaLogo from '../../../../assets/images/footer-logo.png'
 
 const Footer: React.FC = () => {
   return (
     <footer css={styles.base}>
       <div css={styles.container}>
-        <div css={styles.logoContainer}>
-          <div css={styles.logoTitle}>LOGO</div>
-          <div css={styles.logoSubTitle}>サービスキャッチコピー</div>
-        </div>
+        <NextImage
+          src={LontaLogo}
+          width={180}
+          height={50}
+          spWidth={140}
+          spHeight={40}
+          alt="Lontaのロゴ"
+        />
         <ul css={styles.navContainer}>
           <div css={styles.textContainer}>
             <li>
