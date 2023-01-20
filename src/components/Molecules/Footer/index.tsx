@@ -3,8 +3,13 @@ import { MdPeople } from 'react-icons/md'
 import Link from 'next/link'
 import NextImage from '@/components/Atoms/NextImage'
 import LontaLogo from '../../../../assets/images/footer-logo.png'
+import { useRouter } from 'next/router'
 
 const Footer: React.FC = () => {
+  const router = useRouter()
+  const goToTop = () => {
+    router.push('/')
+  }
   return (
     <footer css={styles.base}>
       <div css={styles.container}>
@@ -15,16 +20,18 @@ const Footer: React.FC = () => {
           spWidth={140}
           spHeight={40}
           alt="Lontaのロゴ"
+          cursor
+          onClick={goToTop}
         />
         <ul css={styles.navContainer}>
           <div css={styles.textContainer}>
             <li>
               <Link href="" css={styles.nav}>
-                〇〇について
+                Lontaについて
               </Link>
             </li>
             <li>
-              <Link href="" css={styles.nav}>
+              <Link href="/#job" css={styles.nav}>
                 職種から探す
               </Link>
             </li>
@@ -36,7 +43,12 @@ const Footer: React.FC = () => {
           </div>
           <li>
             <button>
-              <Link href="" css={styles.contact}>
+              <Link
+                href="https://lin.ee/E8cn3aY"
+                target="_blank"
+                css={styles.contact}
+                rel="noreferrer"
+              >
                 <MdPeople size={30} color="white" />
                 個人面談に申し込む
               </Link>
@@ -45,7 +57,7 @@ const Footer: React.FC = () => {
         </ul>
       </div>
       <div css={styles.copyRight}>
-        Copyright ©️ 2022 ◯◯ All rights reserved.
+        Copyright ©️ 2022 Lonta All rights reserved.
       </div>
     </footer>
   )

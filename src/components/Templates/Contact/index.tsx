@@ -5,11 +5,17 @@ import BackgroundImagePathSP from '../../../../assets/images/contact-background-
 import NextImage from '@/components/Atoms/NextImage'
 import ManImagePath from '../../../../assets/images/contact-man.png'
 import { isMobile } from 'react-device-detect'
+import Link from 'next/link'
 
 const Contact: React.FC = () => {
   return (
     <div css={styles.base}>
-      <div css={styles.container}>
+      <Link
+        href="https://lin.ee/E8cn3aY"
+        target="_blank"
+        rel="noreferrer"
+        css={styles.container}
+      >
         <Image
           src={isMobile ? BackgroundImagePathSP : BackgroundImagePathPC}
           layout="fill"
@@ -30,7 +36,7 @@ const Contact: React.FC = () => {
           </p>
           <button css={styles.button}>お申し込みはこちら</button>
         </div>
-      </div>
+      </Link>
     </div>
   )
 }
