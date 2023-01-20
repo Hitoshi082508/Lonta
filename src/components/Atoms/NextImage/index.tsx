@@ -5,6 +5,7 @@ import {
   styles,
   borderRadius,
   getPercentWidth,
+  getCursorStyle,
 } from './styles'
 
 type NextImageProps = {
@@ -17,6 +18,8 @@ type NextImageProps = {
   radius?: number
   src: string | StaticImageData
   alt: string
+  cursor?: boolean
+  onClick?: () => void
 }
 
 const NextImage: React.FC<NextImageProps> = ({
@@ -29,6 +32,8 @@ const NextImage: React.FC<NextImageProps> = ({
   radius,
   src,
   alt,
+  cursor,
+  onClick,
 }) => {
   return (
     <div
@@ -38,7 +43,9 @@ const NextImage: React.FC<NextImageProps> = ({
         getHeightWidthStyle(width, height, spWidth, spHeight),
         percentWidth && getPercentWidth(percentWidth),
         borderRadius(radius),
+        cursor && getCursorStyle,
       ]}
+      onClick={onClick}
     >
       <Image src={src} alt={alt} layout="fill" />
     </div>

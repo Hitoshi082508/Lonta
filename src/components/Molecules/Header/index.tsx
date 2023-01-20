@@ -4,8 +4,13 @@ import Link from 'next/link'
 import Hamburger from '@/components/Atoms/Hamburger'
 import NextImage from '@/components/Atoms/NextImage'
 import LontaLogo from '../../../../assets/images/header-logo.jpg'
+import { useRouter } from 'next/router'
 
 const Header: React.FC = () => {
+  const router = useRouter()
+  const goToTop = () => {
+    router.push('/')
+  }
   return (
     <header css={styles.base}>
       <div css={styles.container}>
@@ -16,16 +21,18 @@ const Header: React.FC = () => {
           spWidth={140}
           spHeight={40}
           alt="Lontaのロゴ"
+          cursor
+          onClick={goToTop}
         />
         <Hamburger />
         <ul css={styles.navContainer}>
           <li>
             <Link href="" css={styles.nav}>
-              〇〇について
+              Lontaについて
             </Link>
           </li>
           <li>
-            <Link href="" css={styles.nav}>
+            <Link href="/#job" css={styles.nav}>
               職種から探す
             </Link>
           </li>
@@ -36,7 +43,12 @@ const Header: React.FC = () => {
           </li>
           <li>
             <button>
-              <Link href="" css={styles.contact}>
+              <Link
+                href="https://lin.ee/E8cn3aY"
+                target="_blank"
+                css={styles.contact}
+                rel="noreferrer"
+              >
                 <MdPeople size={30} color="white" />
                 個人面談に申し込む
               </Link>
