@@ -5,8 +5,14 @@ import Hamburger from '@/components/Atoms/Hamburger'
 import NextImage from '@/components/Atoms/NextImage'
 import LontaLogo from '../../../../assets/images/header-logo.jpg'
 import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
+import { isMobile } from 'react-device-detect'
 
 const Header: React.FC = () => {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  })
   const router = useRouter()
   const goToTop = () => {
     router.push('/')
@@ -24,37 +30,39 @@ const Header: React.FC = () => {
           cursor
           onClick={goToTop}
         />
-        <Hamburger />
-        <ul css={styles.navContainer}>
-          <li>
-            <Link href="" css={styles.nav}>
-              Lontaについて
-            </Link>
-          </li>
-          <li>
-            <Link href="/#job" css={styles.nav}>
-              職種から探す
-            </Link>
-          </li>
-          <li>
-            <Link href="" css={styles.nav}>
-              適正診断してみる
-            </Link>
-          </li>
-          <li>
-            <button>
-              <Link
-                href="https://lin.ee/E8cn3aY"
-                target="_blank"
-                css={styles.contact}
-                rel="noreferrer"
-              >
-                <MdPeople size={30} color="white" />
-                個人面談に申し込む
+        {mounted && isMobile && <Hamburger />}
+        {mounted && !isMobile && (
+          <ul css={styles.navContainer}>
+            <li>
+              <Link href="" css={styles.nav}>
+                Lontaについて
               </Link>
-            </button>
-          </li>
-        </ul>
+            </li>
+            <li>
+              <Link href="/#job" css={styles.nav}>
+                職種から探す
+              </Link>
+            </li>
+            <li>
+              <Link href="" css={styles.nav}>
+                適正診断してみる
+              </Link>
+            </li>
+            <li>
+              <button>
+                <Link
+                  href="https://lin.ee/E8cn3aY"
+                  target="_blank"
+                  css={styles.contact}
+                  rel="noreferrer"
+                >
+                  <MdPeople size={30} color="white" />
+                  個人面談に申し込む
+                </Link>
+              </button>
+            </li>
+          </ul>
+        )}
       </div>
     </header>
   )
