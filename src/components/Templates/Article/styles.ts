@@ -71,5 +71,9 @@ export const styles = makeStyles({
       border-radius: 15px;
       margin: ${spacing * 6}px 0;
     }
+    ol {
+      font-weight: bold;
+      padding-left: ${spacing * 4}px;
+    }
   `,
 })
