@@ -41,6 +41,9 @@ export const styles = makeStyles({
       :visited {
         color: ${theme.color.black};
       }
+      :link {
+        color: ${theme.color.black};
+      }
     }
     .is-active-li {
       font-weight: ${theme.typography.weight.bold};
