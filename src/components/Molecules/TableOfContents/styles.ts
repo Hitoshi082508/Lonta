@@ -14,7 +14,9 @@ export const styles = makeStyles({
     box-shadow: ${theme.shadow.main};
     padding: ${spacing * 4}px;
     ${sp} {
-      display: none;
+      position: static;
+      width: 100%;
+      margin: ${spacing * 10}px 0;
     }
   `,
   tableOfContentsTitle: (theme) => css`
