@@ -15,7 +15,11 @@ export type Contents = {
     revisedAt: string
     updatedAt: string
   }[]
-  content: string
+  content: {
+    fieldId: string
+    html: string
+    richEditor: string
+  }[]
   createdAt: string
   excerpt: string
   eyecatch: {

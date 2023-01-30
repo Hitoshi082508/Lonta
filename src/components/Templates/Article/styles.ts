@@ -75,5 +75,14 @@ export const styles = makeStyles({
       font-weight: bold;
       padding-left: ${spacing * 4}px;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: ${spacing * 4}px 0;
+    }
+    th,
+    td {
+      border: 1px solid #333;
+    }
   `,
 })
