@@ -13,11 +13,17 @@ type ArticleProps = {
 
 const Article: React.FC<ArticleProps> = ({ data }) => {
   const [mounted, setMounted] = useState(false)
+
   useEffect(() => {
     setMounted(true)
   })
+
+  const contents = data.content
+    .map((item) => item.richEditor + item.html)
+    .reduce((acc, cur) => acc + cur)
+
   const createMarkup = () => {
-    return { __html: data.content }
+    return { __html: contents }
   }
   return (
     <article css={styles.container} className="body">
