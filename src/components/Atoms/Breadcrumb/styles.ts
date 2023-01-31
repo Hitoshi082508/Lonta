@@ -27,21 +27,21 @@ export const changeTriangleColor = (isLast: boolean, theme: Theme) =>
 
 export const styles = makeStyles({
   container: (theme) => css`
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 40px;
     height: 40px;
     width: fit-content;
     border-top: ${borderSize}px solid ${theme.color.white};
     border-left: ${borderSize}px solid ${theme.color.white};
     border-bottom: ${borderSize}px solid ${theme.color.white};
-    position: relative;
+    padding: 0 40px;
   `,
   link: (theme) => css`
     display: inline-block;
-    font-size: ${theme.typography.text.size.s};
     color: inherit;
+    font-size: ${theme.typography.text.size.s};
   `,
   innerTriangle: () => css`
     position: absolute;
