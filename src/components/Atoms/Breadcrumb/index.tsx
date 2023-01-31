@@ -10,13 +10,13 @@ type BreadcrumbProps = {
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ title, link, isLast }) => {
   return (
-    <div css={[styles.container, changeContainerColor(isLast, theme)]}>
+    <li css={[styles.container, changeContainerColor(isLast, theme)]}>
       <Link href={link} css={styles.link}>
         {title}
       </Link>
       <div css={styles.outerTriangle} />
       <div css={[styles.innerTriangle, changeTriangleColor(isLast, theme)]} />
-    </div>
+    </li>
   )
 }
 

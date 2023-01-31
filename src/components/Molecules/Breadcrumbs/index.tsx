@@ -10,19 +10,21 @@ type BreadcrumbListProps = {
 
 const Breadcrumbs: React.FC<BreadcrumbListProps> = ({ breadcrumbs }) => {
   return (
-    <div css={styles.container}>
-      {breadcrumbs.map((breadcrumb, index) => {
-        const isLast = index === breadcrumbs.length - 1
-        return (
-          <Breadcrumb
-            key={breadcrumb.link}
-            title={breadcrumb.title}
-            link={breadcrumb.link}
-            isLast={isLast}
-          ></Breadcrumb>
-        )
-      })}
-    </div>
+    <nav aria-label="breadcrumb">
+      <ul css={styles.container}>
+        {breadcrumbs.map((breadcrumb, index) => {
+          const isLast = index === breadcrumbs.length - 1
+          return (
+            <Breadcrumb
+              key={breadcrumb.link}
+              title={breadcrumb.title}
+              link={breadcrumb.link}
+              isLast={isLast}
+            ></Breadcrumb>
+          )
+        })}
+      </ul>
+    </nav>
   )
 }
 

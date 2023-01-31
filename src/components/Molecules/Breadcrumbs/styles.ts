@@ -6,5 +6,6 @@ export const styles = makeStyles({
     display: flex;
     justify-content: start;
     width: 100%;
+    padding: 0; // デフォルトの CSS を上書き
   `,
 })
