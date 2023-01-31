@@ -42,7 +42,7 @@ export const styles = makeStyles({
     align-items: center;
     justify-content: center;
     height: 40px;
-    width: fit-content;
+    min-width: fit-content;
     border-top: ${borderSize}px solid ${theme.color.white};
     border-left: ${borderSize}px solid ${theme.color.white};
     border-bottom: ${borderSize}px solid ${theme.color.white};
