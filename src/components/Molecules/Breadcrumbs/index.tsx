@@ -8,7 +8,7 @@ type BreadcrumbListProps = {
   }[]
 }
 
-const BreadcrumbList: React.FC<BreadcrumbListProps> = ({ breadcrumbs }) => {
+const Breadcrumbs: React.FC<BreadcrumbListProps> = ({ breadcrumbs }) => {
   return (
     <div css={styles.container}>
       {breadcrumbs.map((breadcrumb, index) => {
@@ -26,4 +26,4 @@ const BreadcrumbList: React.FC<BreadcrumbListProps> = ({ breadcrumbs }) => {
   )
 }
 
-export default BreadcrumbList
+export default Breadcrumbs

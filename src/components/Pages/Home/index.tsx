@@ -1,4 +1,4 @@
-import BreadcrumbList from '@/components/Molecules/BreadcrumbList'
+import Breadcrumbs from '@/components/Molecules/Breadcrumbs'
 import About from '@/components/Templates/About'
 import Contact from '@/components/Templates/Contact'
 import JobList from '@/components/Templates/JobList'
@@ -21,9 +21,9 @@ const dummyBreadcrumbs = [
 const HomePage: React.FC<HomePageProps> = ({ data }) => {
   return (
     <>
-      <BreadcrumbList breadcrumbs={dummyBreadcrumbs.slice(0, 1)} />
-      <BreadcrumbList breadcrumbs={dummyBreadcrumbs.slice(0, 2)} />
-      <BreadcrumbList breadcrumbs={dummyBreadcrumbs} />
+      <Breadcrumbs breadcrumbs={dummyBreadcrumbs.slice(0, 1)} />
+      <Breadcrumbs breadcrumbs={dummyBreadcrumbs.slice(0, 2)} />
+      <Breadcrumbs breadcrumbs={dummyBreadcrumbs} />
       <Top data={data} />
       <About />
       <JobList
