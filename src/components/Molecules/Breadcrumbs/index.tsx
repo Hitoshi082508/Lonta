@@ -20,7 +20,7 @@ const Breadcrumbs: React.FC<BreadcrumbListProps> = ({ breadcrumbs }) => {
               title={breadcrumb.title}
               link={breadcrumb.link}
               isLast={isLast}
-            ></Breadcrumb>
+            />
           )
         })}
       </ul>
