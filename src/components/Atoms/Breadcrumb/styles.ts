@@ -5,7 +5,7 @@ const borderSize = 1
 const innerStandard = 20
 const outerStandard = 21
 
-export const changeContainerColor = (isLast: boolean, theme: Theme) =>
+export const changeColor = (isLast: boolean, theme: Theme) =>
   isLast
     ? css`
         color: ${theme.color.white};
@@ -14,6 +14,16 @@ export const changeContainerColor = (isLast: boolean, theme: Theme) =>
     : css`
         color: ${theme.color.lightGray};
         background-color: ${theme.color.lightBlue};
+      `
+
+// 2番目以降の要素は、左側の余白を三角形の高さ分大きくする
+export const changePadding = (isFirst: boolean) =>
+  isFirst
+    ? css`
+        padding: 0 40px;
+      `
+    : css`
+        padding: 0 40px 0 ${40 + innerStandard * 0.7}px;
       `
 
 export const changeTriangleColor = (isLast: boolean, theme: Theme) =>
@@ -36,7 +46,6 @@ export const styles = makeStyles({
     border-top: ${borderSize}px solid ${theme.color.white};
     border-left: ${borderSize}px solid ${theme.color.white};
     border-bottom: ${borderSize}px solid ${theme.color.white};
-    padding: 0 40px;
   `,
   link: (theme) => css`
     display: inline-block;
