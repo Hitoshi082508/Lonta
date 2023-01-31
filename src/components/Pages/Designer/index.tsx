@@ -3,10 +3,19 @@ import JobList from '@/components/Templates/JobList'
 import { theme } from '@/styles/theme'
 import EngineerIconPath from '../../../../assets/images/engineer-icon.png'
 import DescriptionImagePath from '../../../../assets/images/description-image.png'
+import Breadcrumbs from '@/components/Molecules/Breadcrumbs'
+import { breadcrumbs } from '@/utils/breadcrumbs'
+import { useRouter } from 'next/router'
 
 const DesignerPage: React.FC = () => {
   return (
     <div>
+      <Breadcrumbs
+        breadcrumbs={breadcrumbs.concat({
+          title: 'Webデザイナーになりたい',
+          link: useRouter().pathname,
+        })}
+      />
       <JobDescription
         iconPath={EngineerIconPath}
         iconAlt="エンジニアのアイコン"
