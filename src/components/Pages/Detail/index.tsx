@@ -16,8 +16,8 @@ const DetailPage: React.FC<DetailProps> = ({ data }) => {
       {/* TODO: パンくずリストの各要素のリンクの取得方法を考える */}
       <Breadcrumbs
         breadcrumbs={breadcrumbs.concat(
-          { title: 'Webデザイナーになりたい', link: useRouter().pathname },
-          { title: 'Webデザイナーになりたい', link: useRouter().pathname },
+          { title: 'Webデザイナーになりたい', link: '' },
+          { title: data.title, link: useRouter().pathname },
         )}
       />
       <div css={styles.base}>
