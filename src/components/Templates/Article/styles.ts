@@ -47,13 +47,13 @@ export const styles = makeStyles({
       font-size: ${theme.typography.heading.size.m};
       font-weight: ${theme.typography.weight.bold};
       border-left: 8px solid ${theme.color.main};
-      padding-left: ${spacing * 5}px;
+      padding: 0 ${spacing * 5}px;
       margin: ${spacing * 6}px 0;
       ${sp} {
         font-size: ${theme.typography.heading.size.xs};
         width: 100%;
         margin: ${spacing * 4}px 0;
-        padding: ${spacing * 3}px ${spacing * 2}px;
+        padding: ${spacing * 2}px;
       }
     }
     h3 {
@@ -70,6 +70,10 @@ export const styles = makeStyles({
     img {
       border-radius: 15px;
       margin: ${spacing * 6}px 0;
+    }
+    ol {
+      font-weight: bold;
+      padding-left: ${spacing * 4}px;
     }
   `,
 })

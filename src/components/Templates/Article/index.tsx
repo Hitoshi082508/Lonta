@@ -3,17 +3,24 @@ import { Contents } from '@/types/contents'
 import { styles } from './styles'
 import { cdate } from 'cdate'
 import NextImage from '@/components/Atoms/NextImage'
+import TableOfContents from '@/components/Molecules/TableOfContents'
+import { isMobile } from 'react-device-detect'
+import { useEffect, useState } from 'react'
 
 type ArticleProps = {
   data: Contents
 }
 
 const Article: React.FC<ArticleProps> = ({ data }) => {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  })
   const createMarkup = () => {
     return { __html: data.content }
   }
   return (
-    <article css={styles.container}>
+    <article css={styles.container} className="body">
       <h1 css={styles.title}>{data.title}</h1>
       <div css={styles.categoryContainer}>
         {data.category.map((item) => {
@@ -31,6 +38,7 @@ const Article: React.FC<ArticleProps> = ({ data }) => {
         radius={15}
         alt={data.eyecatchAlt}
       />
+      {isMobile && mounted && <TableOfContents />}
       <div css={styles.article} dangerouslySetInnerHTML={createMarkup()} />
     </article>
   )

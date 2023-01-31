@@ -4,27 +4,39 @@ import { spacing } from '@/styles/spacing'
 import { sp } from '@/styles/breakpoint'
 
 export const styles = makeStyles({
-  base: () => css`
+  base: (theme) => css`
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: column;
     width: 100%;
-    height: 60px;
-    position: relative;
+    height: 160px;
+    background-color: ${theme.color.black};
+    color: ${theme.color.white};
+    ${sp} {
+      height: 310px;
+    }
   `,
   container: () => css`
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     width: 1120px;
     ${sp} {
+      width: 100%;
+      flex-direction: column;
       padding: 0 ${spacing * 3}px;
     }
   `,
-  logo: (theme) => css`
+  logoContainer: () => css`
+    display: flex;
+    flex-direction: column;
+  `,
+  logoTitle: (theme) => css`
     font-size: ${theme.typography.heading.size.m};
     font-weight: ${theme.typography.weight.bold};
+  `,
+  logoSubTitle: (theme) => css`
+    font-size: ${theme.typography.text.size.xs};
   `,
   navContainer: (theme) => css`
     display: flex;
@@ -33,17 +45,30 @@ export const styles = makeStyles({
     height: 45px;
     font-size: ${theme.typography.text.size.m};
     font-weight: ${theme.typography.weight.bold};
-    color: ${theme.color.black};
     list-style: none;
-    gap: ${spacing * 5}px;
     ${sp} {
-      display: none;
+      flex-direction: column;
+      font-size: ${theme.typography.text.size.s};
+      padding-left: 0;
+    }
+  `,
+  textContainer: () => css`
+    display: flex;
+    gap: ${spacing * 6}px;
+    margin-right: ${spacing * 6}px;
+    ${sp} {
+      width: 345px;
+      justify-content: space-between;
+      margin-right: 0;
+      gap: 0px;
+      margin: ${spacing * 5}px 0;
     }
   `,
   nav: (theme) => css`
-    color: ${theme.color.black};
+    color: ${theme.color.white};
+    border-bottom: 1px solid ${theme.color.white};
     :visited {
-      color: ${theme.color.black};
+      color: ${theme.color.white};
     }
   `,
   contact: (theme) => css`
@@ -58,5 +83,11 @@ export const styles = makeStyles({
     :visited {
       color: ${theme.color.white};
     }
+    ${sp} {
+      margin-bottom: ${spacing * 5}px;
+    }
+  `,
+  copyRight: (theme) => css`
+    font-size: ${theme.typography.text.size.s};
   `,
 })

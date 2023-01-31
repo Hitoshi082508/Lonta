@@ -1,24 +1,17 @@
 import { styles } from './styles'
 import { MdPeople } from 'react-icons/md'
 import Link from 'next/link'
-import Hamburger from '@/components/Atoms/Hamburger'
 import NextImage from '@/components/Atoms/NextImage'
-import LontaLogo from '../../../../assets/images/header-logo.jpg'
+import LontaLogo from '../../../../assets/images/footer-logo.png'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
-import { isMobile } from 'react-device-detect'
 
-const Header: React.FC = () => {
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => {
-    setMounted(true)
-  })
+const Footer: React.FC = () => {
   const router = useRouter()
   const goToTop = () => {
     router.push('/')
   }
   return (
-    <header css={styles.base}>
+    <footer css={styles.base}>
       <div css={styles.container}>
         <NextImage
           src={LontaLogo}
@@ -30,9 +23,8 @@ const Header: React.FC = () => {
           cursor
           onClick={goToTop}
         />
-        {mounted && isMobile && <Hamburger />}
-        {mounted && !isMobile && (
-          <ul css={styles.navContainer}>
+        <ul css={styles.navContainer}>
+          <div css={styles.textContainer}>
             <li>
               <Link href="" css={styles.nav}>
                 Lontaについて
@@ -48,24 +40,27 @@ const Header: React.FC = () => {
                 適正診断してみる
               </Link>
             </li>
-            <li>
-              <button>
-                <Link
-                  href="https://lin.ee/E8cn3aY"
-                  target="_blank"
-                  css={styles.contact}
-                  rel="noreferrer"
-                >
-                  <MdPeople size={30} color="white" />
-                  個人面談に申し込む
-                </Link>
-              </button>
-            </li>
-          </ul>
-        )}
+          </div>
+          <li>
+            <button>
+              <Link
+                href="https://lin.ee/E8cn3aY"
+                target="_blank"
+                css={styles.contact}
+                rel="noreferrer"
+              >
+                <MdPeople size={30} color="white" />
+                個人面談に申し込む
+              </Link>
+            </button>
+          </li>
+        </ul>
       </div>
-    </header>
+      <div css={styles.copyRight}>
+        Copyright ©️ 2022 Lonta All rights reserved.
+      </div>
+    </footer>
   )
 }
 
-export default Header
+export default Footer

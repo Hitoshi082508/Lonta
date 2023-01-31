@@ -16,7 +16,6 @@ export const styles = makeStyles({
     display: flex;
     width: 1120px;
     height: 300px;
-    background-image: url('/assets/images/online-background.jpg');
     padding: ${spacing * 3}px ${spacing * 15}px;
     ${sp} {
       width: 345px;

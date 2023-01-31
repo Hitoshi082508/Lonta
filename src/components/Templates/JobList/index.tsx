@@ -17,7 +17,7 @@ const JobList: React.FC<JobListProps> = ({
   fontColor,
 }) => {
   return (
-    <div css={[styles.base, getBackgroundColor(backgroundColor)]}>
+    <div id="job" css={[styles.base, getBackgroundColor(backgroundColor)]}>
       <div css={[styles.container, getFontColor(fontColor)]}>
         <div css={styles.titleContainer}>
           <SlMagnifier css={styles.icon} color={fontColor} />

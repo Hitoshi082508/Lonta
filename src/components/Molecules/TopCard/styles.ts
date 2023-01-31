@@ -32,6 +32,11 @@ export const styles = makeStyles({
     border-radius: 15px;
   `,
   title: (theme) => css`
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    height: 54px;
     font-size: ${theme.typography.text.size.l};
     font-weight: ${theme.typography.weight.bold};
     color: ${theme.color.white};

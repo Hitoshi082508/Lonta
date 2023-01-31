@@ -29,6 +29,10 @@ export const borderRadius = (radius: number) => css`
   }
 `
 
+export const getCursorStyle = () => css`
+  cursor: pointer;
+`
+
 export const displayNone = (spNone?: boolean) => {
   if (spNone) {
     return css`
