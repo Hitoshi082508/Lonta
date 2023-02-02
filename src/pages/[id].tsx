@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo'
 export const getStaticPaths = async () => {
   const data: Content = await client.get({ endpoint: 'blogs' })
 
-  const paths = data.contents.map((content) => `/${content.id}`)
+  const paths = data.contents.map((content) => `/${content.permalink}`)
   return { paths, fallback: false }
 }
 
@@ -26,6 +26,7 @@ type DetailProps = {
 }
 
 const Detail: React.FC<DetailProps> = ({ data }) => {
+  console.log(data)
   return (
     <>
       <NextSeo

@@ -33,6 +33,7 @@ export type Contents = {
   revisedAt: string
   title: string
   updatedAt: string
+  permalink: string
 }
 
 export type Steps = {
