@@ -26,7 +26,6 @@ type DetailProps = {
 }
 
 const Detail: React.FC<DetailProps> = ({ data }) => {
-  console.log(data)
   return (
     <>
       <NextSeo
