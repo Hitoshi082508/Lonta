@@ -1,4 +1,5 @@
 import About from '@/components/Templates/About'
+import Column from '@/components/Templates/Column'
 import Contact from '@/components/Templates/Contact'
 import JobList from '@/components/Templates/JobList'
 import Member from '@/components/Templates/Member'
@@ -22,6 +23,7 @@ const HomePage: React.FC<HomePageProps> = ({ data }) => {
         backgroundColor={theme.color.main}
         fontColor={theme.color.white}
       />
+      <Column articles={data} />
       <Voice />
       <Member />
       <Contact />
