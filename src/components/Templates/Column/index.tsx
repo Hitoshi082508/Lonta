@@ -29,7 +29,7 @@ const Column: React.FC<ColumnProps> = ({ articles }) => {
             return <ArticleCard key={article.id} article={article} />
           })}
         </div>
-        <Button text="記事一覧を見る" />
+        <Button text="記事一覧を見る" as="a" />
       </div>
     </div>
   )

@@ -3,6 +3,9 @@ import makeStyles from '@/styles/makeStyles'
 
 export const styles = makeStyles({
   container: (theme) => css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 280px;
     height: 50px;
     background-color: ${theme.color.main};
