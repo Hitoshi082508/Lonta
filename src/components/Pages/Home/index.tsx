@@ -1,5 +1,5 @@
 import About from '@/components/Templates/About'
-import Column from '@/components/Templates/Column'
+import Column from '@/components/Templates/ColumnsArea'
 import Contact from '@/components/Templates/Contact'
 import JobList from '@/components/Templates/JobList'
 import Member from '@/components/Templates/Member'

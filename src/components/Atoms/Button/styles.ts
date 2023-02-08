@@ -13,5 +13,6 @@ export const styles = makeStyles({
     font-size: ${theme.typography.text.size.m};
     font-weight: ${theme.typography.weight.bold};
     border-radius: 50px;
+    cursor: pointer;
   `,
 })
