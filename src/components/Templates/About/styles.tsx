@@ -9,4 +9,11 @@ export const styles = makeStyles({
     justify-content: center;
     width: 100%;
   `,
+  textContainer: () => css``,
+  imageContainer: () => css``,
+  title: () => css``,
+  subTitle: () => css``,
+  description: () => css``,
+  button: () => css``,
+  imageTitle: () => css``,
 })
