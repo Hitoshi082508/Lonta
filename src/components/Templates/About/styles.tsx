@@ -54,6 +54,6 @@ export const styles = makeStyles({
     font-size: ${theme.typography.heading.size.s};
     font-weight: ${theme.typography.weight.bold};
     text-align: center;
-    margin-bottom: ${spacing * 5}px;
+    margin-bottom: ${spacing * 10}px;
   `,
 })
