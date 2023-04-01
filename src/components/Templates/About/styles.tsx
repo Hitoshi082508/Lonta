@@ -7,8 +7,15 @@ export const styles = makeStyles({
   base: () => css`
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    height: 500px;
   `,
+  container: () =>
+    css`
+      display: flex;
+      width: 1120px;
+      height: 300px;
+    `,
   textContainer: () => css``,
   imageContainer: () => css``,
   title: () => css``,
