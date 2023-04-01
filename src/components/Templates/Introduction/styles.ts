@@ -51,7 +51,7 @@ export const styles = makeStyles({
       margin-bottom: ${spacing * 6}px;
     }
   `,
-  aboutCardContainer: () => css`
+  introductionCardContainer: () => css`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
