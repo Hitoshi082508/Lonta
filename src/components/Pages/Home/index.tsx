@@ -1,4 +1,4 @@
-import About from '@/components/Templates/About'
+import Introduction from '@/components/Templates/Introduction'
 import Contact from '@/components/Templates/Contact'
 import JobList from '@/components/Templates/JobList'
 import Member from '@/components/Templates/Member'
@@ -15,7 +15,7 @@ const HomePage: React.FC<HomePageProps> = ({ data }) => {
   return (
     <>
       <Top data={data} />
-      <About />
+      <Introduction />
       <JobList
         title="Category"
         subTitle="なりたい像から自分に合った職を見つけよう"
