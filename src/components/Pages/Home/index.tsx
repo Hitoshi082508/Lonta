@@ -4,6 +4,7 @@ import JobList from '@/components/Templates/JobList'
 import Member from '@/components/Templates/Member'
 import Top from '@/components/Templates/Top'
 import Voice from '@/components/Templates/Voice'
+import About from '@/components/Templates/About'
 import { theme } from '@/styles/theme'
 import { Contents } from '@/types/contents'
 
@@ -25,6 +26,7 @@ const HomePage: React.FC<HomePageProps> = ({ data }) => {
       <Voice />
       <Member />
       <Contact />
+      <About />
     </>
   )
 }
