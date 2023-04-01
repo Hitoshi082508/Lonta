@@ -26,12 +26,12 @@ export const styles = makeStyles({
   subTitle: (theme) => css`
     font-size: ${theme.typography.text.size.m};
     color: ${theme.color.black};
-    margin-bottom: ${spacing * 8}px;
+    margin-bottom: ${spacing * 10}px;
   `,
   description: (theme) => css`
     font-size: ${theme.typography.text.size.s};
     color: ${theme.color.black};
-    margin-bottom: ${spacing * 8}px;
+    margin-bottom: ${spacing * 10}px;
   `,
   button: (theme) => css`
     display: flex;
@@ -54,6 +54,6 @@ export const styles = makeStyles({
     font-size: ${theme.typography.heading.size.s};
     font-weight: ${theme.typography.weight.bold};
     text-align: center;
-    margin-bottom: ${spacing * 8}px;
+    margin-bottom: ${spacing * 5}px;
   `,
 })
