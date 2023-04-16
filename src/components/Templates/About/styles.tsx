@@ -4,22 +4,38 @@ import { spacing } from '@/styles/spacing'
 import { sp } from '@/styles/breakpoint'
 
 export const styles = makeStyles({
-  base: (theme) => css`
+  base: () => css`
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 500px;
-    background-color: ${theme.color.lightMain};
+    height: 700px;
   `,
+  titleContainer: () =>
+    css`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    `,
+  title: () =>
+    css`
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    `,
+
   container: () =>
     css`
       display: flex;
+      align-items: center;
       gap: ${spacing * 8}px;
       width: 1120px;
       height: 350px;
+      margin-top: 20px;
     `,
   textContainer: () => css``,
-  title: (theme) => css`
+  titleText: (theme) => css`
+    margin-bottom: 8px;
     font-size: ${theme.typography.heading.size.m};
     font-weight: ${theme.typography.weight.bold};
   `,
@@ -29,7 +45,7 @@ export const styles = makeStyles({
     margin-bottom: ${spacing * 10}px;
   `,
   description: (theme) => css`
-    font-size: ${theme.typography.text.size.s};
+    font-size: ${theme.typography.text.size.m};
     color: ${theme.color.black};
     margin-bottom: ${spacing * 10}px;
   `,
