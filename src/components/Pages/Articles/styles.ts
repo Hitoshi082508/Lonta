@@ -24,6 +24,9 @@ export const styles = makeStyles({
     gap: ${spacing * 8}px;
     margin-top: ${spacing * 10}px;
     ${sp} {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
       margin-top: ${spacing * 6}px;
     }
   `,
