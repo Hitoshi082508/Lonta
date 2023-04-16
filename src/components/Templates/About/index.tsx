@@ -2,6 +2,7 @@ import { styles } from './styles'
 import NextImage from '@/components/Atoms/NextImage'
 import PeopleImagePath from '../../../../assets/images/about-people.png'
 import AboutIconPath from '../../../../assets/images/about-icon.png'
+import { isMobile } from 'react-device-detect'
 
 const About: React.FC = () => {
   return (
@@ -20,12 +21,16 @@ const About: React.FC = () => {
       </div>
       <div css={styles.container}>
         <div>
-          <p css={styles.imageTitle}>長期インターンに関するお悩みは</p>
-          <p css={styles.imageTitleBottom}>Lontaで解決！</p>
+          <div css={styles.imageTitle}>
+            <p>長期インターンに関するお悩みは</p>
+            <p>Lontaで解決！</p>
+          </div>
           <NextImage
             src={PeopleImagePath}
             width={487}
             height={241}
+            spWidth={345}
+            spHeight={171}
             alt="おすすめする人々"
           />
         </div>
@@ -34,10 +39,9 @@ const About: React.FC = () => {
             <p>
               大学生の皆さん、長期・有給インターンシップにチャレンジしてみませんか？
             </p>
-            <p>
+            <p css={styles.descriptionMiddle}>
               Lontaは、長期インターンを実際に経験した学生が作った、長期インターンやキャリア構築に関する情報提供を行うメディアです。
             </p>
-            <br />
             <p>
               詳しい職種説明や厳選したインターンの紹介、ここでしか見ることができないコラムなど、長期インターンへの挑戦を充実の機能でサポートします！
             </p>
