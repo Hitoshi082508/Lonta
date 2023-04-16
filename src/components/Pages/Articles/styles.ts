@@ -6,7 +6,8 @@ import { sp } from '@/styles/breakpoint'
 export const styles = makeStyles({
   base: (theme) => css`
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     background-color: ${theme.color.lightMain};
   `,
@@ -14,6 +15,7 @@ export const styles = makeStyles({
     display: flex;
     justify-content: center;
     width: 1120px;
+    flex-wrap: wrap;
     gap: ${spacing * 8}px;
     margin-top: ${spacing * 10}px;
     ${sp} {
