@@ -54,6 +54,7 @@ export const styles = makeStyles({
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
+    min-height: 45px;
     color: ${theme.color.black};
     ${sp} {
       -webkit-line-clamp: 3;

@@ -22,7 +22,7 @@ export const styles = makeStyles({
     width: 1120px;
     flex-wrap: wrap;
     gap: ${spacing * 8}px;
-    margin-top: ${spacing * 10}px;
+    margin: ${spacing * 10}px 0;
     ${sp} {
       flex-direction: column;
       align-items: center;
