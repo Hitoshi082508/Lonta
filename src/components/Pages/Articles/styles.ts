@@ -4,12 +4,17 @@ import { spacing } from '@/styles/spacing'
 import { sp } from '@/styles/breakpoint'
 
 export const styles = makeStyles({
-  base: (theme) => css`
+  base: () => css`
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: ${theme.color.lightMain};
+  `,
+  title: () => css`
+    display: flex;
+    align-items: center;
+    gap: ${spacing * 1}px;
+    margin-top: ${spacing * 5}px;
   `,
   container: () => css`
     display: flex;
