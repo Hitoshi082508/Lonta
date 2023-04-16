@@ -25,6 +25,7 @@ declare module '@emotion/react' {
           m: '16px'
           s: '14px'
           xs: '12px'
+          xxs: '10px'
         }
       }
       weight: {
