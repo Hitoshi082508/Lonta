@@ -22,6 +22,10 @@ export const styles = makeStyles({
     padding: ${spacing * 4}px ${spacing * 2}px;
   `,
   title: (theme) => css`
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
     height: 54px;
     font-size: ${theme.typography.text.size.l};
     font-weight: ${theme.typography.weight.bold};
@@ -29,6 +33,10 @@ export const styles = makeStyles({
     margin-bottom: ${spacing * 3}px;
   `,
   excerpt: (theme) => css`
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
     color: ${theme.color.black};
   `,
   categoryContainer: () => css`
