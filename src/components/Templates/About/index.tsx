@@ -2,7 +2,6 @@ import { styles } from './styles'
 import NextImage from '@/components/Atoms/NextImage'
 import PeopleImagePath from '../../../../assets/images/about-people.png'
 import AboutIconPath from '../../../../assets/images/about-icon.png'
-import { isMobile } from 'react-device-detect'
 
 const About: React.FC = () => {
   return (
